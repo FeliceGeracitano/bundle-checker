@@ -30,3 +30,5 @@ This repository uses Danger.JS to automate some checks in the CI environment (se
 Danger requires a github token `DANGER_GITHUB_API_TOKEN` to be setup in the travis settings for this repository.
 
 Please see this [danger.js setup guide](https://medium.com/@ivan.ha/integrate-danger-js-in-5-minutes-55515bc5355d) for more information.
+
+CI-TEST
