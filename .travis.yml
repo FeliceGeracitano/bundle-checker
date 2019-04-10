@@ -7,4 +7,4 @@ script:
   - yarn
   - yarn pack
   - ls -l ./bin
-  - ./bin/run compare --gitRepository='https://github.com/ramda/ramda.git' --installScript='yarn' --buildScript='yarn build:es' --currentBranch='CrossEye-patch-1' --distPath='es' --targetBranch='master'
+  - ./bin/run compare --prComment --gitRepository='https://github.com/ramda/ramda.git' --installScript='yarn' --buildScript='yarn build:es' --currentBranch='CrossEye-patch-1' --distPath='es' --targetBranch='master'
