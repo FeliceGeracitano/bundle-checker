@@ -3,9 +3,11 @@ language: node_js
 node_js:
   - '11'
 script:
+  - env
   - yarn
   - yarn pack
-  - ./bin/run compare --prComment \
+  - ls -l ./bin
+  - ./bin/run compare \
     --gitRepository='https://github.com/ramda/ramda.git' \
     --installScript='yarn' \
     --buildScript='yarn build:es' \
