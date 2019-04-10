@@ -11,7 +11,12 @@ import {
   ITableReport,
   ITableRow
 } from '../../types/bundle-checker-types';
-import { createMarkdownTable, getRowsForTotalSizeReport, groupByFileExtension } from './utils';
+import {
+  commentOnPr,
+  createMarkdownTable,
+  getRowsForTotalSizeReport,
+  groupByFileExtension
+} from './utils';
 const exec = util.promisify(childProcessExec);
 
 export default class BundleChecker {
@@ -23,6 +28,10 @@ export default class BundleChecker {
   constructor(params: IBundleCheckerParams) {
     this.inputParams = params; // TODO: perform default override of some params
     this.originalCwd = process.cwd();
+  }
+
+  public async commentOnPr(comment: any) {
+    await commentOnPr(comment);
   }
 
   // Refactor this, it is doing too much
